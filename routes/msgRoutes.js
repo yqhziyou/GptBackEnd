@@ -14,10 +14,10 @@ router.post('/sendMessage', async (req, res) => {
             });
         }
 
-        // 调用msgController并接收其返回值
+        // Call msgController and receive its return value
         const responseData = await msgController(userID, sessionID, message, selectedModel);
 
-        // 检查responseData是否存在
+        // Check if responseData exists
         if (!responseData) {
             throw new Error("No response data received from controller");
         }

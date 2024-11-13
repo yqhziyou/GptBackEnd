@@ -24,7 +24,7 @@ const messageHandler = async (userID, sessionID, message, selectedModel = "gpt-4
         return reply;
     } catch (error) {
         console.error("messageHandler controller error", error);
-        // 重要：将错误往上抛，而不是静默失败
+        // Important: Throw the error upwards instead of silently failing
         throw error;
     }
 };
